@@ -1,0 +1,7 @@
+COMMAND: v.in.ogr --overwrite input="C:/Users/jocho/Desktop/opengis/project/data/in\bus\bus_route.shp" output="busroute" min_area=0.0001 type="" snap=-1 columns="True"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
+LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Wed Jan 30 11:49:36 2019
+---------------------------------------------------------------------------------
+COMMAND: v.net --overwrite input="busroute" points="busstop" output="busnet" operation="connect" arc_layer="1" arc_type="line,boundary" node_layer="2" threshold=20 turn_layer="3" turn_cat_layer="4"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
+LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Wed Jan 30 11:49:38 2019
