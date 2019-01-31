@@ -1,11 +1,11 @@
 COMMAND: v.net.iso --overwrite input="tramnet" output="iso_tram" method="from" center_cats="1" costs=1000,2000,3000,4000,5000,6000,7000,8000,9000,10000 arc_layer="1" arc_type="line,boundary" node_layer="2" turn_layer="3" turn_cat_layer="4"
-GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
-LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Thu Jan 31 14:03:33 2019
+GISDBASE: \\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\Location
+LOCATION: loc MAPSET: PERMANENT USER: ei448 DATE: Thu Jan 31 18:11:06 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.connect --quiet map="iso_tram" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="iso_tram" key="cat" layer="1" separator="pipe"
-GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
-LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Thu Jan 31 14:03:33 2019
+GISDBASE: \\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\Location
+LOCATION: loc MAPSET: PERMANENT USER: ei448 DATE: Thu Jan 31 18:11:07 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.addtable.py "--o" "map=iso_tram"
-GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
-LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Thu Jan 31 14:03:34 2019
+GISDBASE: \\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\Location
+LOCATION: loc MAPSET: PERMANENT USER: ei448 DATE: Thu Jan 31 18:11:08 2019

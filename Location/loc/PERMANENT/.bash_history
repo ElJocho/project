@@ -145,3 +145,36 @@ C:\Users\jocho\Desktop\opengis\project\python\dat_script_0_0.py
 C:\Users\jocho\Desktop\opengis\project\python\dat_script_0_0.py
 C:\Users\jocho\Desktop\opengis\project\python\dat_script_0_0.py
 C:\Users\jocho\Desktop\opengis\project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+v.distance from=tramstop to=iso_tram upload=cat column=first_tram_distance --o
+g.list
+g.list type=vector
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py
+\\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\python\dat_script_0_0.py

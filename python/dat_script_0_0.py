@@ -2,13 +2,14 @@
 
 import grass.script as grass                 #auto
 import os                                      #fuer import
-
+import subprocess
 def main():
     grass.run_command('g.region', flags='p') #auto
     
 #load input data
     #sets basepath
-    input_path = "C:/Users/jocho/Desktop/opengis/project/data/in" 
+    input_path = "M:/Desktop/os_project/data/in" 
+
     
     #bus
     path_bus_stop=os.path.join(input_path, 'bus', 'bus_stop.shp')
@@ -44,9 +45,8 @@ def main():
     grass.run_command('v.patch', input=['central_point','busstop'], output='c_busstop', overwrite=True)    
 
 
-
-#removing dangles
-    grass.run_command('v.clean', input='tramroute', output='tramroute2', tool=['break','rmdupl','rmdangle'],overwrite=True, threshold=[0,0,30])
+#cleaning vectors
+    grass.run_command('v.clean', input='tramroute', output='tramroute2', tool=['snap','break','rmdupl','rmdangle'],overwrite=True, threshold=[30,0,0,30])
     grass.run_command('v.clean', input='busroute', output='busroute2', tool=['break','rmdupl','rmdangle'],overwrite=True, threshold=[0,0,500])
 
 #conntecting central point to buslines
@@ -65,9 +65,11 @@ def main():
     grass.run_command('v.db.addtable', map='iso_tram',overwrite=True)
     grass.run_command('v.db.addtable', map='iso_bus2',overwrite=True)
 
+#adding column
+    grass.run_command('v.db.addcolumn', map='tramstop', columns='first_tram_distance integer' )
 #connecting network with stations to keep catnum
-    grass.run_command('v.distance',"from"='tramstop', to='iso_tram', upload='cat',column='first_tram_distance', overwrite=True)    
-#v.overlay ainput=erreichbarkeit_montag_425 atype=line binput=grenzen_bezirke output=erreichbarkeit_montag_425_bezirke operator=and
+   # grass.run_command('v.distance',from='tramstop', to='iso_tram', upload='cat',column='first_tram_distance', overwrite=True)    
+    os.system( " ".join(["v.distance","from=tramstop","to=iso_tram","upload=cat","column=first_tram_distance","--o"]))
 #
 if __name__ == '__main__':                     #auto
     main()                                     #auto

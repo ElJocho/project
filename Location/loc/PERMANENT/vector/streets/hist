@@ -1,3 +1,3 @@
-COMMAND: v.in.ogr --overwrite input="C:/Users/jocho/Desktop/opengis/project/data/in\streets\streets.shp" output="streets" min_area=0.0001 type="" snap=-1 columns="True"
-GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
-LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Thu Jan 31 14:03:25 2019
+COMMAND: v.in.ogr --overwrite input="M:/Desktop/os_project/data/in\streets\streets.shp" output="streets" min_area=0.0001 type="" snap=-1 columns="True"
+GISDBASE: \\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\Location
+LOCATION: loc MAPSET: PERMANENT USER: ei448 DATE: Thu Jan 31 18:10:45 2019
