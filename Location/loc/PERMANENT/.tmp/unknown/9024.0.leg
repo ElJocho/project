@@ -1,4 +1,2 @@
-busnet|basic/x|5|lf|128:0:0|200:200:200|1|point|947
-busnet|legend/line|5|lf|128:0:0|200:200:200|1|line|3106
-busroute|legend/line|5|lf|black|200:200:200|1|line|1484
-busstop|basic/x|5|lf|black|200:200:200|1|point|949
+iso_tram|legend/line|5|lf|black|200:200:200|3|line|457
+central_point|basic/x|5|lf|black|200:200:200|1|point|2

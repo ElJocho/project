@@ -1,0 +1,3 @@
+COMMAND: v.patch --overwrite input="central_point,busstop" output="c_busstop"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
+LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Thu Jan 31 14:03:27 2019

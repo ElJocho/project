@@ -1,1 +1,1 @@
-1/bus_route|tramroute|True|$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db|sqlite
+1/tram_route|tramroute|True|$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db|sqlite
