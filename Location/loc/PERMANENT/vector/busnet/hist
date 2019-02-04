@@ -1,11 +1,11 @@
-COMMAND: v.in.ogr --overwrite input="M:/Desktop/os_project/data/in\bus\bus_route.shp" output="busroute" min_area=0.0001 type="" snap=-1 columns="True"
-GISDBASE: \\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\Location
-LOCATION: loc MAPSET: PERMANENT USER: ei448 DATE: Thu Jan 31 18:10:37 2019
+COMMAND: v.in.ogr --overwrite input="C:/Users/jocho/Desktop/opengis/project/data/in\bus\bus_route.shp" output="busroute" min_area=0.0001 type="" snap=-1 columns="True"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
+LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Mon Feb 04 18:27:55 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.clean --overwrite input="busroute" layer="-1" type="point,line,boundary,centroid,area,face,kernel" output="busroute2" tool="break,rmdupl,rmdangle" threshold=0,0,500
-GISDBASE: \\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\Location
-LOCATION: loc MAPSET: PERMANENT USER: ei448 DATE: Thu Jan 31 18:10:53 2019
+GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
+LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Mon Feb 04 18:27:59 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.net --overwrite input="busroute2" points="c_busstop" output="busnet" operation="connect" arc_layer="1" arc_type="line,boundary" node_layer="2" threshold=20 turn_layer="3" turn_cat_layer="4"
-GISDBASE: \\netfilec.ad.uni-heidelberg.de\home\e\ei448\Desktop\os_project\Location
-LOCATION: loc MAPSET: PERMANENT USER: ei448 DATE: Thu Jan 31 18:11:00 2019
+GISDBASE: C:\Users\jocho\Desktop\opengis\project\Location
+LOCATION: loc MAPSET: PERMANENT USER: jocho DATE: Mon Feb 04 18:28:07 2019
