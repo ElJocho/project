@@ -1,0 +1,15 @@
+COMMAND: v.patch --overwrite input="busstop,tramstop" output="tbstop"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:17 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect --quiet map="tbstop" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="tbstop" key="cat" layer="1" separator="pipe"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:18 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.addtable.py "--o" "map=tbstop"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:18 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcolumn.py "--o" "map=tbstop" "columns=first_tb_distance integer"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:36 2019

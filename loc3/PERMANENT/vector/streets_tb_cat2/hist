@@ -1,0 +1,39 @@
+COMMAND: v.in.ogr --overwrite input="C:/Users/jocho/Desktop/opengis/project/data/inter\iso_streets_tb.shp" output="streets_tb_cat2" min_area=0.0001 type="" snap=-1 columns="True"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:16:45 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcolumn.py "--o" "map=streets_tb_cat2" "columns=first_tb_distance2 int"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:17:55 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcolumn.py "--o" "map=streets_tb_cat2" "columns=final_costs_tb int"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:10 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.update.py "--o" "column=final_costs_tb" "map=streets_tb_cat2" "layer=1" "query_column=first_tb_distance2 + cat_ + 5"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:11 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcolumn.py "--o" "map=streets_tb_cat2" "columns=tram_cost int"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:11 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcolumn.py "--o" "map=streets_tb_cat2" "columns=bus_cost int"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:19 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcolumn.py "--o" "map=streets_tb_cat2" "columns=lowest"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:26 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.update.py "--o" "column=lowest" "map=streets_tb_cat2" "layer=1" "qcolumn=tram_cost" "where=tram_cost <= bus_cost<=final_costs_tb"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:26 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.update.py "--o" "column=lowest" "map=streets_tb_cat2" "layer=1" "qcolumn=bus_cost" "where=bus_cost <= tram_cost AND bus_cost <= final_costs_tb"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:27 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.update.py "--o" "column=lowest" "map=streets_tb_cat2" "layer=1" "qcolumn=final_costs_tb" "where=final_costs_tb <= tram_cost AND final_costs_tb <= bus_cost"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:27 2019

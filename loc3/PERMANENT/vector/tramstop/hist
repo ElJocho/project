@@ -1,0 +1,7 @@
+COMMAND: v.in.ogr --overwrite input="C:/Users/jocho/Desktop/opengis/project/data/in\tram\tram_stops.shp" output="tramstop" min_area=0.0001 type="" snap=-1 columns="True"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:14 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcolumn.py "--o" "map=tramstop" "columns=first_tram_distance integer"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:35 2019

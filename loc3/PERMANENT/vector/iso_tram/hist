@@ -1,0 +1,11 @@
+COMMAND: v.net.iso --overwrite input="tramnet" output="iso_tram" method="from" center_cats="1" costs=295,590,885,1180,1475,1770,2065,2360,2655,2950,3245,3540,3835,4130,4425,4720,5015,5310,5605,5900,6195,6490,6785,7080,7375,7670,7965,8260,8555,8850,9145,9440,9735,10030,10325,10620,10915,11210,11505,11800,12095,12390,12685,12980,13275,13570,13865,14160,14455,14750,15045,15340,15635,15930,16225,16520,16815,17110,17405,17700,17995,18290,18585,18880,19175,19470,19765,20060,20355,20650,20945,21240,21535,21830,22125,22420,22715,23010,23305,23600,23895,24190,24485,24780,25075,25370,25665,25960,26255,26550,26845,27140,27435,27730,28025,28320,28615,28910 arc_layer="1" arc_type="line,boundary" node_layer="2" turn_layer="3" turn_cat_layer="4"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:32 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect --quiet map="iso_tram" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="iso_tram" key="cat" layer="1" separator="pipe"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:33 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.addtable.py "--o" "map=iso_tram"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:33 2019

@@ -1,0 +1,7 @@
+COMMAND: v.patch --overwrite input="tramroute,busroute" output="tbroute"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:17 2019
+---------------------------------------------------------------------------------
+COMMAND: v.clean --overwrite input="tbroute" layer="-1" type="point,line,boundary,centroid,area,face,kernel" output="tbroute2" tool="snap,break,rmdupl,rmdangle" threshold=30,0,0,30
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:23 2019
