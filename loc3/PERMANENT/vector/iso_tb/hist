@@ -1,11 +1,11 @@
 COMMAND: v.net.iso --overwrite input="tbnet" output="iso_tb" method="from" center_cats="1" costs=264,528,792,1056,1320,1584,1848,2112,2376,2640,2904,3168,3432,3696,3960,4224,4488,4752,5016,5280,5544,5808,6072,6336,6600,6864,7128,7392,7656,7920,8184,8448,8712,8976,9240,9504,9768,10032,10296,10560,10824,11088,11352,11616,11880,12144,12408,12672,12936,13200,13464,13728,13992,14256,14520,14784,15048,15312,15576,15840,16104,16368,16632,16896,17160,17424,17688,17952,18216,18480,18744,19008,19272,19536,19800,20064,20328,20592,20856,21120,21384,21648,21912,22176,22440,22704,22968,23232,23496,23760,24024,24288,24552,24816,25080,25344,25608,25872 arc_layer="1" arc_type="line,boundary" node_layer="2" turn_layer="3" turn_cat_layer="4"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:32 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:39:49 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.connect --quiet map="iso_tb" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="iso_tb" key="cat" layer="1" separator="pipe"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:35 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:39:52 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.addtable.py "--o" "map=iso_tb"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:15:35 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:39:52 2019

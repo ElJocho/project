@@ -1,15 +1,19 @@
 COMMAND: v.in.ogr --overwrite input="C:/Users/jocho/Desktop/opengis/project/data/inter\iso_streets_bus.shp" output="streets_bus_cat2" min_area=0.0001 type="" snap=-1 columns="True"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:16:26 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:40:44 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.addcolumn.py "--o" "map=streets_bus_cat2" "columns=first_bus_distance2 int"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:16:54 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:41:10 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.addcolumn.py "--o" "map=streets_bus_cat2" "columns=final_costs_bus int"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:09 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:43:25 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.update.py "--o" "column=final_costs_bus" "map=streets_bus_cat2" "layer=1" "query_column=first_bus_distance2 + cat_"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 18:19:10 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:43:26 2019
+---------------------------------------------------------------------------------
+COMMAND: v.db.update.py "--o" "column=final_costs_bus" "map=streets_bus_cat2" "where=first_bus_distance2 = 0" "value=99999"
+GISDBASE: C:\Users\jocho\Desktop\opengis\project
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:43:28 2019

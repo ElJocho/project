@@ -69,7 +69,6 @@ def main():
     grass.run_command('v.net', input='tramroute2', points='c_tramstop', output='tramnet', operation='connect', threshold = 20, overwrite=True,alayer=1,nlayer=2)
     grass.run_command('v.net', input='tbroute2', points='c_tbstop', output='tbnet', operation='connect', threshold = 20, overwrite=True,alayer=1,nlayer=2)
    
-
 #Preparing lists that are classified by traveled distance in meters with different methods.
     costs_tram=[]   #trams travel at 295m/min-> input for costs
     costs_bus=[]    #buses travel at 233m/min
@@ -93,7 +92,6 @@ def main():
         temp_foot=temp_foot+speed_foot
         temp_tb=temp_tb+speed_tb
 
-
 #network analysis of from central point along the lines
     grass.run_command('v.net.iso', input='tramnet', output='iso_tram',center_cats=[1], costs=costs_tram, overwrite=True, nlayer=2)
     grass.run_command('v.net.iso', input='busnet', output='iso_bus',center_cats=[1], costs=costs_bus, overwrite=True, nlayer=2)
@@ -103,6 +101,7 @@ def main():
     grass.run_command('v.db.addtable', map='iso_tram',overwrite=True)
     grass.run_command('v.db.addtable', map='iso_bus',overwrite=True)
     grass.run_command('v.db.addtable', map='iso_tb',overwrite=True)
+
 
 #adding column
     grass.run_command('v.db.addcolumn', map='tramstop', columns='first_tram_distance integer',overwrite=True)
@@ -170,6 +169,8 @@ def main():
     #tb !!+5 because you need to wait between lines
     grass.run_command('v.db.addcolumn', map='streets_tb_cat2', columns='final_costs_tb int',overwrite=True)
     grass.run_command('v.db.update', map='streets_tb_cat2',layer=1, column='final_costs_tb', query_column="first_tb_distance2 + cat_ + 5",overwrite=True)
+#deleting lines not connected to the center
+    grass.run_command('v.db.update', map='streets_bus_cat2', column='final_costs_bus', value=99999, where="first_bus_distance2 = 0",overwrite=True)
 
 #adding all final colums into streets_tb_cat2
     grass.run_command('v.db.addcolumn', map='streets_tb_cat2', columns='tram_cost int',overwrite=True)
@@ -177,12 +178,12 @@ def main():
     grass.run_command('v.db.addcolumn', map='streets_tb_cat2', columns='bus_cost int',overwrite=True)
     grass.run_command('v.distance',from_='streets_tb_cat2', to='streets_bus_cat2', upload='to_attr', to_column='final_costs_bus',column='bus_cost', overwrite=True)   
 
+
 #selecting the lowest possible value for each street ->potentially very bad method
-    grass.run_command('v.db.addcolumn', map='streets_tb_cat2', columns='lowest',overwrite=True)
+    grass.run_command('v.db.addcolumn', map='streets_tb_cat2', columns='lowest int',overwrite=True)
     grass.run_command('v.db.update', map='streets_tb_cat2',layer=1, column='lowest', qcolumn="tram_cost",overwrite=True, where="tram_cost <= bus_cost<=final_costs_tb")
     grass.run_command('v.db.update', map='streets_tb_cat2',layer=1, column='lowest', qcolumn="bus_cost",overwrite=True, where="bus_cost <= tram_cost AND bus_cost <= final_costs_tb")
     grass.run_command('v.db.update', map='streets_tb_cat2',layer=1, column='lowest', qcolumn="final_costs_tb", overwrite=True, where="final_costs_tb <= tram_cost AND final_costs_tb <= bus_cost")
-
 
 #exporting final layers
     grass.run_command('v.out.ogr',input='streets_tb_cat2',output=out_path, format='ESRI_Shapefile',overwrite=True)
