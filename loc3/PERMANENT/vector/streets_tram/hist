@@ -1,11 +1,11 @@
 COMMAND: v.in.ogr --overwrite input="C:/Users/jocho/Desktop/opengis/project/data/in\streets\streets.shp" output="streets" min_area=0.0001 type="" snap=-1 columns="True"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:39:32 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Thu Feb 07 01:46:48 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.clean --overwrite input="streets" layer="-1" type="point,line,boundary,centroid,area,face,kernel" output="streets2" tool="break,rmdupl,rmdangle" threshold=0,0,30
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:39:44 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Thu Feb 07 01:47:01 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.net --overwrite input="streets2" points="tramstop" output="streets_tram" operation="connect" arc_layer="1" arc_type="line,boundary" node_layer="2" threshold=20 turn_layer="3" turn_cat_layer="4"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:39:54 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Thu Feb 07 01:47:11 2019

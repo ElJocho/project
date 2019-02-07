@@ -1,15 +1,15 @@
 COMMAND: v.in.ogr --overwrite input="C:/Users/jocho/Desktop/opengis/project/data/inter\iso_streets_tram.shp" output="streets_tram_cat2" min_area=0.0001 type="" snap=-1 columns="True"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:40:23 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Thu Feb 07 01:47:42 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.addcolumn.py "--o" "map=streets_tram_cat2" "columns=first_tram_distance2 int"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:41:06 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Thu Feb 07 01:48:26 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.addcolumn.py "--o" "map=streets_tram_cat2" "columns=final_costs_tram int"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:43:24 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Thu Feb 07 01:50:46 2019
 ---------------------------------------------------------------------------------
 COMMAND: v.db.update.py "--o" "column=final_costs_tram" "map=streets_tram_cat2" "layer=1" "query_column=first_tram_distance2 + cat_"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:43:25 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Thu Feb 07 01:50:46 2019

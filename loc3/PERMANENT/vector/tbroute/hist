@@ -1,3 +1,3 @@
 COMMAND: v.patch --overwrite input="tramroute,busroute" output="tbroute"
 GISDBASE: C:\Users\jocho\Desktop\opengis\project
-LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Tue Feb 05 20:39:34 2019
+LOCATION: loc3 MAPSET: PERMANENT USER: jocho DATE: Thu Feb 07 01:46:50 2019
