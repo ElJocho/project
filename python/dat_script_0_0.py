@@ -1,9 +1,10 @@
-#!/usr/bin/env python
-
-import grass.script as grass                 #auto
-import os                                    #for importing data
-   
-def main():
+#!/usr/bin/env python
+
+
+import grass.script as grass                 #auto
+import os                                    #for importing data
+   
+def main():
     grass.run_command('g.region', flags='p') #auto
     grass.run_command('g.remove', flags='f' , type='vector', pattern='*') #optional - delets old files to delete corrupted data and have a fresh start
 
@@ -79,10 +80,15 @@ def main():
     costs_bus=[]    #buses travel at 233m/min
     costs_foot=[]   #traveling by foot comes in at 67m/min
     costs_tb=[]
+    temp_tram=295
     speed_tram=295
+    temp_bus=233 
     speed_bus=233
+    temp_foot=67
     speed_foot=67
+    temp_tb=264
     speed_tb=264
+    
     for i in range(1,99):       #-> 99 categories and +1 in category means +x traveled distance
         costs_tram.append(temp_tram)
         costs_bus.append(temp_bus)
@@ -92,7 +98,7 @@ def main():
         temp_bus=temp_bus+speed_bus
         temp_foot=temp_foot+speed_foot
         temp_tb=temp_tb+speed_tb
-
+        
 #network analysis of from central point along the lines
     grass.run_command('v.net.iso', input='tramnet', output='iso_tram',center_cats=[1], costs=costs_tram, overwrite=True, nlayer=2)
     grass.run_command('v.net.iso', input='busnet', output='iso_bus',center_cats=[1], costs=costs_bus, overwrite=True, nlayer=2)
@@ -136,11 +142,6 @@ def main():
 
 
 #                                                   5. calculating the shortest time and preparation
-
-#creating table with category numbers
-    grass.run_command('v.db.addtable', map='iso_streets_tram',overwrite=True)
-    grass.run_command('v.db.addtable', map='iso_streets_bus',overwrite=True)
-    grass.run_command('v.db.addtable', map='iso_streets_tb',overwrite=True)
 
 #exporting and then importing to convert net into vector feature and to split features with the same cat
     #tram
@@ -204,5 +205,5 @@ def main():
 
 
 
-if __name__ == '__main__':                     #executes main
-    main()                                     
+if __name__ == '__main__':                     #executes main
+    main()                                     
